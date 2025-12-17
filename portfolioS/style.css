@@ -941,22 +941,74 @@ a{
 }
 
 @media screen and (max-width: 767px){
-    .navbar , .mobile-nav , .hero-section , #about , .services , .contact-content{
+    .hero-section , #about , .services , .contact-content{
         padding: 0 0.5rem;
     }
     .wrapper{
         max-width: 100%;
+    }
+    .mobile-navnav{
+        width: 100%;
+    }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        background:#1B264F;
+    }
+    .mobile-header{
+        display: block;
+        height: 72px;
+        padding: 0 16px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-navLinks{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 30px 30px;
+        gap: 1.5rem;
+        width: 100%;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .mobile-navLinks a{
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .mobile-socmed{
+        padding: 20px 0 20px 20px;    
+    }
+    .mobile-socmed ul{
+        display: flex;
+        gap: 5px;
+    }
+    .footer-section{
+        width: 100%;
+        height: 72px;
+        color: var(--white);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
     .hero-section, .about-content{
         display: flex;
         flex-direction: column;
     }
     .hero-section{
-        min-height: 70vh;
+        min-height: calc(100vh - 100px);
         gap: 2rem;
-        padding-top: 1rem;
+        padding: 72px 0.5rem 0;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     .hero-image img{
@@ -983,11 +1035,11 @@ a{
     .hero-bottom{
         margin-top: 10px;
         width: 100%;
-        height: 10vh;
+        height: 70px;
         padding-top: 8px;
     }
     .banner-content{
-        height: 8vh;
+        height: 56px;
     }
     .banner-track{
         gap: 3.5rem;
@@ -1191,7 +1243,7 @@ a{
         background-color: #5d8fdae7;
     }
     .navbar{
-        visibility: hidden;
+        display: none !important;
     }
     .bar{
         background: none;
@@ -1205,57 +1257,7 @@ a{
         padding: 12px;
         font-size: 24px;
     }
-    .mobile-navnav{
-        width: 100%;
-    }
-    .mobile-nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: auto;
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-        background:#1B264F;
-    }
-    .mobile-header{
-        display: block;
-        height: 14vh;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .mobile-navLinks{
-        display: flex;
-        flex-direction: column;
-        padding: 0 0 30px 30px;
-        gap: 1.5rem;
-        width: 100%;
-        border-bottom: 1px solid #dcdcdc;
 
-    }
-    .mobile-navLinks a{
-        color: var(--white);
-        font-size: 18px;
-        font-weight: 400;
-    }
-    .mobile-socmed{
-        padding: 20px 0 20px 20px;    
-    }
-    .mobile-socmed ul{
-        display: flex;
-        gap: 5px;
-    }
-    .footer-section{
-        width: 100%;
-        height: 10vh;
-        color: var(--white);
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
     .footer-name {
         margin: 0 2rem;
     }
