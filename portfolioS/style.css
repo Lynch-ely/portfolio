@@ -22,7 +22,6 @@ html, body{
     --white: white;
     --black: black;
 }
-
 #home , #about{
     scroll-margin-top: 25vh; 
 }
@@ -43,7 +42,7 @@ html, body{
 
 /* Nav Section */
 nav{
-    height: 14vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,18 +87,17 @@ a{
     text-transform: uppercase;
 }
 .contactBtn , .myWorksBtn , .dlCV{
-    background-color: var(--white);
-    color: var(--black);
     padding: 14px 24px;
     font-size: 18px;
     border-radius: 50px;
-    border: none;
     cursor: pointer;
     text-transform: none;
+    color: black;
     transition: all 0.3s ease;
+    background-color: white;
 }
 .contactBtn:hover, .myWorksBtn:hover , .dlCV:hover{
-    background-color: #5d8fda;
+    background-color: var(--main-color);
     color: var(--white);
 }
 .myWorksBtn{
@@ -108,6 +106,7 @@ a{
     margin-top: 10px;
 }
 .myWorksBtn i{
+    color: black;
     margin-left: 8px;
 }
 .mobile-nav{
@@ -138,8 +137,8 @@ a{
     font-size: 18px;
 }
 .hero-image img{
-    max-width: 100%;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
 }
 .hero-bottom{
     margin-top: 20px;
@@ -328,7 +327,7 @@ a{
     padding: 14px 24px;
     background-color: rgba(255, 255, 255, 0.048);
     border: 1px solid rgba(255,255,255,0.075);
-    border-radius: 50px;
+    border-radius: 10px;
     text-transform: none;
     transition: all 0.5s ease;
 }
@@ -440,7 +439,7 @@ a{
 /* Footer Section */
 .footer-section{
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     color: var(--white);
     display: flex;
     justify-content: space-around;
@@ -590,6 +589,8 @@ a{
 .hide{
     display: none;
 }
+
+
 @media screen and (min-width: 1024px) and (max-width: 1355px){
     .hero-text{
         color: var(--white);
@@ -711,8 +712,11 @@ a{
     #portfolio , #contact{
         scroll-margin-top: 5vh; 
     }
-    .navbar , .mobile-nav , .hero-section , #about , .services , .contact-content{
+    .navbar , .hero-section ,.mobile-navnav ,.mobile-socmed, #about , .services , .contact-content{
         padding: 0 3rem;
+    }
+    .mobile-header .logo{
+        padding: 0 1.5rem;
     }
     .wrapper{
         max-width: 900px;
@@ -722,11 +726,13 @@ a{
         width: 330px;
     }
     .hero-text h1{
-        font-size: 46px;
+        font-size: 44px;
+        line-height: 1.15;
     }
     .hero-text p{
         margin: 7px 0;
-        font-size: 15px;
+        font-size: 1rem;
+        line-height: 1.6;
     }
     .hero-image img{
         max-width: 100%;
@@ -734,7 +740,7 @@ a{
     }
     .contactBtn , .myWorksBtn , .dlCV{
         padding: 12px 20px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .hero-bottom{
         margin-top: 10px;
@@ -759,17 +765,19 @@ a{
     }
     .title-des{
         font-size: 24px;
+        line-height: 1.4;
     }
     .about-content{
         gap: 30px;
     }
     .about-details h2{
-        font-size: 30px;
+        font-size: 28px;
         margin: 5px 0;
     }
     .about-details p{
         font-size: 16px;
-        font-weight: 100;
+        line-height: 1.1;
+        font-weight: 200;
     }
     .about-image img{
         max-width: 100%;
@@ -798,13 +806,14 @@ a{
         font-size: 32px;
     }
     .about-stats .stat p{
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 15px;
     }
     .about-stats .stat span{
         color: var(--main-color);
     }
     .pList li a{
+        font-size: 0.875rem;
         padding: 12px 18px;
     }
     .contact-header .title-des{
@@ -824,6 +833,9 @@ a{
         border-radius: 10px;
         border: 1px solid rgba(255,255,255,0.075);
     }
+    .contact-info{
+        height: 360px;
+    }
     .con h3{
         color: var(--main-color);
     }
@@ -838,7 +850,7 @@ a{
         margin-top: 20px;
     }
     .socmed-name h5{
-        font-size: 18px;
+        font-size: 16px;
     }
     .socmed-icon{
         display: flex;
@@ -911,7 +923,7 @@ a{
     }
     .mobile-header{
         display: block;
-        height: 14vh;
+        height: 10vh;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -920,11 +932,10 @@ a{
     .mobile-navLinks{
         display: flex;
         flex-direction: column;
-        padding: 0 0 30px 30px;
+        padding: 0 0 30px 0;
         gap: 1.5rem;
         width: 100%;
         border-bottom: 1px solid #dcdcdc;
-
     }
     .mobile-navLinks a{
         color: var(--white);
@@ -932,7 +943,7 @@ a{
         font-weight: 400;
     }
     .mobile-socmed{
-        padding: 20px 0 20px 20px;    
+        padding: 20px 0 20px 0;    
     }
     .mobile-socmed ul{
         display: flex;
@@ -948,20 +959,53 @@ a{
 
     .portfolio-crafts .craft{
         width: 100%;
-        max-width: 360px;
+        max-width: 320px;
         border-radius: 12px;
         display: flex;
         justify-content: center;
+        padding: 5px;
     }
 
     .portfolio-crafts .craft img,
     .portfolio-crafts .craft video{
-        width: 96%;
+        width: 100%;
         height: auto;
         aspect-ratio: 16 / 10;
         object-fit: cover;
-        border-radius: 12px;       /* same radius as glass */
+        border-radius: 12px;
         display: block;
+        margin: 0 auto;
+    }
+    .footer-section{
+        display: flex;
+        align-items: center;
+        height: 72px;
+    }
+    .footer-section a{
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    .footer-name p{
+        margin-top: 10px;
+        font-size: 0.75rem; 
+        line-height: 1.4;
+        color: #d3d3d3;
+    }
+    .footer-socmed ul, .mobile-socmed{
+        display: flex;
+        gap: 12px;
+    }
+    .footer-socmed ul li a i , .mobile-socmed ul li a i{
+        padding: 10px;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+    }
+    .footer-socmed ul li a i:hover , .mobile-socmed ul li a i:hover{ 
+        color: var(--black);
+        background-color: #d3d3d3;
     }
 }
 
@@ -971,6 +1015,9 @@ a{
     }
     .wrapper{
         max-width: 100%;
+    }
+    .logo{
+        font-size: 20px;
     }
     .mobile-navnav{
         width: 100%;
@@ -985,11 +1032,12 @@ a{
         display: flex;
         flex-direction: column;
         background:#1B264F;
+        box-shadow: 0 0.1px 10px white;
     }
     .mobile-header{
         display: block;
         height: 72px;
-        padding: 0 16px;
+        padding: 0 30px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -1028,9 +1076,10 @@ a{
         flex-direction: column;
     }
     .hero-section{
-        min-height: calc(100vh - 72px);
+        min-height: calc(100vh - 120px);
         gap: 2rem;
         padding: 72px 0.5rem 0;
+        margin: 20px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1045,26 +1094,31 @@ a{
         max-width: 300px;
         width: 100%;
         order: 2;
+        gap: 2rem;
+        text-align: center;
     }
     .hero-text h1{
-        font-size: 36px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
     }
     .hero-text p{
-        margin: 7px 0;
-        font-size: 12px;
+        margin: 10px 0;
+        line-height: 1.6;
+        font-size: 0.875rem;
     }
     .contactBtn , .myWorksBtn , .dlCV{
         padding: 12px 12px;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     .hero-bottom{
-        margin-top: 10px;
+        margin-top: 0;
         width: 100%;
         height: 70px;
-        padding-top: 8px;
+        padding-top: 6px;
     }
     .banner-content{
-        height: 56px;
+        height: 60px;
     }
     .banner-track{
         gap: 3.5rem;
@@ -1082,10 +1136,11 @@ a{
         width: 100%;
     }
     .title{
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     .title-des{
-        font-size: 24px;
+        font-size: 1.375rem;
+        line-height: 1.4;
     }
     .about-content{
         margin-top: 5rem;
@@ -1100,7 +1155,8 @@ a{
     }
     .about-details p{
         font-size: 14px;
-        font-weight: 100;
+        line-height: 1.6;
+        font-weight: 400;
     }
     .about-image img{
         max-width: 300px;
@@ -1117,7 +1173,6 @@ a{
     .about-stats .stat{
         max-width: 100%;
         max-height: 100%;
-        width: 250px;
         height: 115px;
         display: flex;
         flex-direction: column;
@@ -1128,7 +1183,7 @@ a{
         background-color: var(--transparent);
     }
     .about-stats .stat h1{
-        font-size: 28px;
+        font-size: 30px;
     }
     .about-stats .stat p{
         font-size: 14px;
@@ -1141,7 +1196,7 @@ a{
         padding: 5rem 0;
     }
     .portfolio-header h1{
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .pList{
         display: flex;
@@ -1191,10 +1246,10 @@ a{
         font-size: 18px;
     }
     .contact-info p , .contact-message p{
-        font-size: 16px;
+        font-size: 14px;
     }
     .contact-header h1{
-        font-size: 16px;
+        margin-bottom: 30px;
     }
     .con{
         max-width: 100%;
@@ -1282,12 +1337,11 @@ a{
         padding: 12px;
         font-size: 24px;
     }
-
     .footer-name {
         margin: 0 2rem;
     }
     .footer-section a{
-        font-size: 16px;
+        font-size: 14px;
     }
     .footer-section p{
         font-size: 12px;
