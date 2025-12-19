@@ -938,6 +938,31 @@ a{
         display: flex;
         gap: 5px;
     }
+    .portfolio-crafts{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-items: center;
+        padding: 0 1.5rem;
+    }
+
+    .portfolio-crafts .craft{
+        width: 100%;
+        max-width: 360px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .portfolio-crafts .craft img,
+    .portfolio-crafts .craft video{
+        width: 96%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        border-radius: 12px;       /* same radius as glass */
+        display: block;
+    }
 }
 
 @media screen and (max-width: 767px){
